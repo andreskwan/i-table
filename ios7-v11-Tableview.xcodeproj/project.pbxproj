@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EA00F4A61A6AB89100FA506C /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00F4A51A6AB89100FA506C /* FlickrFetcher.m */; };
+		EA00F4A91A6ACEA900FA506C /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00F4A81A6ACEA900FA506C /* ImageViewController.m */; };
 		EA3193441A6602870049DD11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3193431A6602870049DD11 /* main.m */; };
 		EA3193471A6602870049DD11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3193461A6602870049DD11 /* AppDelegate.m */; };
 		EA31934A1A6602870049DD11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3193491A6602870049DD11 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 		EA00F4A31A6AB89100FA506C /* FlickrAPIKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrAPIKey.h; sourceTree = "<group>"; };
 		EA00F4A41A6AB89100FA506C /* FlickrFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrFetcher.h; sourceTree = "<group>"; };
 		EA00F4A51A6AB89100FA506C /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
+		EA00F4A71A6ACEA900FA506C /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
+		EA00F4A81A6ACEA900FA506C /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
 		EA31933E1A6602870049DD11 /* ios7-v11-Tableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios7-v11-Tableview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3193421A6602870049DD11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA3193431A6602870049DD11 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -103,6 +106,8 @@
 		EA3193401A6602870049DD11 /* ios7-v11-Tableview */ = {
 			isa = PBXGroup;
 			children = (
+				EA00F4A71A6ACEA900FA506C /* ImageViewController.h */,
+				EA00F4A81A6ACEA900FA506C /* ImageViewController.m */,
 				EA00F4A21A6AB89100FA506C /* Flickr Fetcher */,
 				EA3193671A6605A70049DD11 /* FlickrPhotosTVC.h */,
 				EA3193681A6605A70049DD11 /* FlickrPhotosTVC.m */,
@@ -253,6 +258,7 @@
 				EA3193471A6602870049DD11 /* AppDelegate.m in Sources */,
 				EA3193441A6602870049DD11 /* main.m in Sources */,
 				EA00F4A61A6AB89100FA506C /* FlickrFetcher.m in Sources */,
+				EA00F4A91A6ACEA900FA506C /* ImageViewController.m in Sources */,
 				EA3193691A6605A70049DD11 /* FlickrPhotosTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

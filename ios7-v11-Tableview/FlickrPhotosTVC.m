@@ -7,6 +7,7 @@
 //
 
 #import "FlickrPhotosTVC.h"
+#import "FlickrFetcher.h"
 
 @interface FlickrPhotosTVC ()
 
@@ -42,26 +43,42 @@
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return 0;
+    return [self.photos count];
 }
 
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView
-//         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    return cell;
-//}
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Flickr Photo Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+                                                            forIndexPath:indexPath];
+    
+    // Configure the cell...
+    // we need info from our model
+    NSDictionary *photo = self.photos[indexPath.row];
+    
+    cell.textLabel.text = [photo valueForKeyPath:FLICKR_PHOTO_TITLE];
+    cell.detailTextLabel.text = [photo valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
+    if ([cell.textLabel.text  length] <= 1) {
+        cell.textLabel.text = @"Img without title";
+        NSRange range = [cell.detailTextLabel.text rangeOfString:@""];
+        NSLog(@"%@, %@",cell.detailTextLabel.text, NSStringFromRange(range));
+
+    }
+
+    if ([cell.detailTextLabel.text  length] <= 1) {
+        cell.detailTextLabel.text = @"Img without subtitle";
+    }
+    return cell;
+}
 
 
 /*
