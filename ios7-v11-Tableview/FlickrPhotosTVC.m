@@ -25,20 +25,18 @@
     });
 }
 
+/**
+ Function description: lazy instantiation for photos property
+ reload table view everytime the photo data is set! (model change)
+ 
+ @param NSArray of NSDictionary that holds metadata for photos
+ @returns void
+ */
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)setPhotos:(NSArray *)photos
+{
+    _photos = photos;
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -56,14 +54,14 @@
 }
 
 
-- (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
+//- (UITableViewCell *)tableView:(UITableView *)tableView
+//         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+//    
+//    // Configure the cell...
+//    
+//    return cell;
+//}
 
 
 /*

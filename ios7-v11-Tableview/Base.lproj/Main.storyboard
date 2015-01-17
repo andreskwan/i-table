@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
-        <!--Flickr PhotosTVC-->
+        <!--Just Posted Flickr PhotosTVC-->
         <scene sceneID="EGA-16-9QQ">
             <objects>
-                <tableViewController id="Vyy-pX-Oge" customClass="FlickrPhotosTVC" sceneMemberID="viewController">
+                <tableViewController id="Vyy-pX-Oge" customClass="JustPostedFlickrPhotosTVC" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Qh0-jy-E9D">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
