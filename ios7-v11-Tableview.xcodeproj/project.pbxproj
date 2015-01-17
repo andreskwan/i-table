@@ -14,6 +14,8 @@
 		EA31934F1A6602870049DD11 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA31934E1A6602870049DD11 /* Images.xcassets */; };
 		EA3193521A6602870049DD11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3193501A6602870049DD11 /* LaunchScreen.xib */; };
 		EA31935E1A6602870049DD11 /* ios7_v11_TableviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA31935D1A6602870049DD11 /* ios7_v11_TableviewTests.m */; };
+		EA3193691A6605A70049DD11 /* FlickrPhotosTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3193681A6605A70049DD11 /* FlickrPhotosTVC.m */; };
+		EAE61BCE1A6800F7007EE720 /* MainIpad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAE61BCD1A6800F7007EE720 /* MainIpad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		EA3193571A6602870049DD11 /* ios7-v11-TableviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ios7-v11-TableviewTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA31935C1A6602870049DD11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA31935D1A6602870049DD11 /* ios7_v11_TableviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ios7_v11_TableviewTests.m; sourceTree = "<group>"; };
+		EA3193671A6605A70049DD11 /* FlickrPhotosTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhotosTVC.h; sourceTree = "<group>"; };
+		EA3193681A6605A70049DD11 /* FlickrPhotosTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhotosTVC.m; sourceTree = "<group>"; };
+		EAE61BCD1A6800F7007EE720 /* MainIpad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainIpad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +86,12 @@
 		EA3193401A6602870049DD11 /* ios7-v11-Tableview */ = {
 			isa = PBXGroup;
 			children = (
-				EA3193451A6602870049DD11 /* AppDelegate.h */,
-				EA3193461A6602870049DD11 /* AppDelegate.m */,
+				EA3193671A6605A70049DD11 /* FlickrPhotosTVC.h */,
+				EA3193681A6605A70049DD11 /* FlickrPhotosTVC.m */,
 				EA3193481A6602870049DD11 /* ViewController.h */,
 				EA3193491A6602870049DD11 /* ViewController.m */,
 				EA31934B1A6602870049DD11 /* Main.storyboard */,
+				EAE61BCD1A6800F7007EE720 /* MainIpad.storyboard */,
 				EA31934E1A6602870049DD11 /* Images.xcassets */,
 				EA3193501A6602870049DD11 /* LaunchScreen.xib */,
 				EA3193411A6602870049DD11 /* Supporting Files */,
@@ -96,6 +102,8 @@
 		EA3193411A6602870049DD11 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EA3193451A6602870049DD11 /* AppDelegate.h */,
+				EA3193461A6602870049DD11 /* AppDelegate.m */,
 				EA3193421A6602870049DD11 /* Info.plist */,
 				EA3193431A6602870049DD11 /* main.m */,
 			);
@@ -200,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA31934D1A6602870049DD11 /* Main.storyboard in Resources */,
+				EAE61BCE1A6800F7007EE720 /* MainIpad.storyboard in Resources */,
 				EA3193521A6602870049DD11 /* LaunchScreen.xib in Resources */,
 				EA31934F1A6602870049DD11 /* Images.xcassets in Resources */,
 			);
@@ -222,6 +231,7 @@
 				EA31934A1A6602870049DD11 /* ViewController.m in Sources */,
 				EA3193471A6602870049DD11 /* AppDelegate.m in Sources */,
 				EA3193441A6602870049DD11 /* main.m in Sources */,
+				EA3193691A6605A70049DD11 /* FlickrPhotosTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +356,7 @@
 				INFOPLIST_FILE = "ios7-v11-Tableview/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -356,6 +367,7 @@
 				INFOPLIST_FILE = "ios7-v11-Tableview/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -412,6 +424,7 @@
 				EA3193631A6602870049DD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA3193641A6602870049DD11 /* Build configuration list for PBXNativeTarget "ios7-v11-TableviewTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +433,7 @@
 				EA3193661A6602870049DD11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
