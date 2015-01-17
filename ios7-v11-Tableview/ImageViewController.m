@@ -46,8 +46,9 @@
 
 - (void)setImage:(UIImage *)image
 {
+    self.scrollView.zoomScale = 1.0;
     self.imageView.image = image; // does not change the frame of the UIImageView
-    [self.imageView sizeToFit];   // update the frame of the UIImageView
+    self.imageView.frame = CGRectMake(0,0,image.size.width, image.size.height);
     self.scrollView.contentSize = self.image? self.image.size : CGSizeZero;
     [self.spinner stopAnimating];
 }
