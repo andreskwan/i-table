@@ -8,7 +8,7 @@
 
 #import "ImageViewController.h"
 
-@interface ImageViewController ()<UIScrollViewDelegate>
+@interface ImageViewController ()<UIScrollViewDelegate, UISplitViewControllerDelegate>
 @property (nonatomic, strong)UIImageView *imageView;
 @property (nonatomic, strong)UIImage * image;
 @property (nonatomic, strong)UIImageView *logoView;
@@ -25,7 +25,14 @@
     [self.view setBackgroundColor:[UIColor blackColor]];
     [self.scrollView addSubview:self.imageView];
     [self.scrollView addSubview:self.logoView];
-
+    //whit this line of code
+    //there is no need of the delegate
+    self.navigationItem.leftBarButtonItem = [self.splitViewController displayModeButtonItem];
+    UIViewController * masterVC = self.navigationController.splitViewController.viewControllers[0];
+    UIViewController * detailVC = self.navigationController.splitViewController.viewControllers[1];
+    NSLog(@"TILE????: %@, lastObj %@",masterVC.title, self.navigationController.splitViewController.viewControllers.firstObject);
+    self.navigationItem.leftBarButtonItem.title = masterVC.title;
+    self.navigationItem.leftItemsSupplementBackButton = true;
 }
 
 #pragma mark - Propiedades
@@ -126,4 +133,32 @@
     }
 }
 
+#pragma mark - UISplitViewControllerDelegate
+//- (void)awakeFromNib
+//{
+//    self.splitViewController.delegate = self;
+//}
+//
+//- (BOOL)splitViewController:(UISplitViewController *)svc
+//   shouldHideViewController:(UIViewController *)vc
+//              inOrientation:(UIInterfaceOrientation)orientation
+//{
+//    return UIInterfaceOrientationIsPortrait(orientation);
+//}
+//
+//-(void)splitViewController:(UISplitViewController *)svc
+//    willHideViewController:(UIViewController *)aViewController
+//         withBarButtonItem:(UIBarButtonItem *)barButtonItem
+//      forPopoverController:(UIPopoverController *)pc
+//{
+//    barButtonItem.title = aViewController.title;
+//    self.navigationItem.leftBarButtonItem = barButtonItem;
+//}
+//
+//- (void)splitViewController:(UISplitViewController *)svc
+//     willShowViewController:(UIViewController *)aViewController
+//  invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
+//{
+//    self.navigationItem.leftBarButtonItem = nil;
+//}
 @end

@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="1017" y="408"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Shuttlerbug-->
         <scene sceneID="XTO-BV-GaC">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xbJ-sA-ORx" sceneMemberID="viewController">
+                <navigationController title="Shuttlerbug" automaticallyAdjustsScrollViewInsets="NO" id="xbJ-sA-ORx" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DHQ-5v-6tm">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
