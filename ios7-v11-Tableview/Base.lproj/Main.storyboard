@@ -54,7 +54,7 @@
                             </fragment>
                         </attributedString>
                         <connections>
-                            <action selector="refresh" destination="Vyy-pX-Oge" eventType="valueChanged" id="8nH-SV-dQw"/>
+                            <action selector="fetchPhotos" destination="Vyy-pX-Oge" eventType="valueChanged" id="jQU-Xk-QWB"/>
                         </connections>
                     </refreshControl>
                 </tableViewController>

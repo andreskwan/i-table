@@ -15,18 +15,6 @@
 @end
 
 @implementation FlickrPhotosTVC
-
-- (IBAction)refresh
-{
-    [self.refreshControl beginRefreshing];
-    dispatch_queue_t otherQ = dispatch_queue_create("Q", NULL);
-    dispatch_async(otherQ, ^{
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.refreshControl endRefreshing];
-        });
-    });
-}
-
 /**
  Function description: lazy instantiation for photos property
  reload table view everytime the photo data is set! (model change)

@@ -30,7 +30,11 @@
     self.navigationItem.leftBarButtonItem = [self.splitViewController displayModeButtonItem];
     UIViewController * masterVC = self.navigationController.splitViewController.viewControllers[0];
     UIViewController * detailVC = self.navigationController.splitViewController.viewControllers[1];
-    NSLog(@"TILE????: %@, lastObj %@",masterVC.title, self.navigationController.splitViewController.viewControllers.firstObject);
+    NSLog(@"masterVC.title: %@ detailVC.title: %@, splitViewController.viewControllers : %@, %@",
+          masterVC.title,
+          detailVC.title,
+          self.navigationController.splitViewController.viewControllers.firstObject,
+          self.navigationController.splitViewController.viewControllers.lastObject);
     self.navigationItem.leftBarButtonItem.title = masterVC.title;
     self.navigationItem.leftItemsSupplementBackButton = true;
 }
