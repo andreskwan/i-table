@@ -7,9 +7,10 @@
 //
 
 #import "Photo+PhotoCategory.h"
+#import "Photographer+Create.h"
 #import "FlickrFetcher.h"
 
-@implementation Photo (PhotoCategory)
+@implementation Photo (Flickr)
 
 /**
  Function description: takes a flickr dictionary, adds a photo(an obj) to the DB
@@ -45,8 +46,19 @@
     }else{                           //if don't exists, create photo in DB
         photo = [NSEntityDescription insertNewObjectForEntityForName:@"Photo"
                                               inManagedObjectContext:context];
+        photo.unique = unique;
+        photo.title  = [photoDictionary valueForKeyPath:FLICKR_PHOTO_TITLE];
+        photo.subtitle = [photoDictionary valueForKeyPath:FLICKR_PHOTO_DESCRIPTION];
+        photo.imageURL = [[FlickrFetcher URLforPhoto:photoDictionary
+                                              format:FlickrPhotoFormatLarge]absoluteString];
+        //create a photo also force to create a photographer.
+        NSString * photographerName = [photoDictionary valueForKeyPath:FLICKR_PHOTO_OWNER];
+        // create other db objs like photographer
+        photo.whoTook = [Photographer photographerWithName:photographerName
+                                    inManagedObjectCOntext:context];
+        
     }
-    // create other db objs like photographer
+
 
     return photo;
 }
@@ -56,7 +68,7 @@
  
  @param photos array of NSDictionary from Flicker
  @param photos array of NSDictionary from Flicker
- @returns <#returns#>
+ @returns ;;
  */
 
 + (void) loadPhotosFromFlickrArray:(NSArray *)photos //of Flickr NSdictionary

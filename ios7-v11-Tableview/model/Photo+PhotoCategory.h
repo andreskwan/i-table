@@ -9,7 +9,7 @@
 #import "Photo.h"
 #import <UIKit/UIKit.h>
 
-@interface Photo (PhotoCategory)
+@interface Photo (Flickr)
 
 + (Photo *)photoWithFlickrInfo:(NSDictionary *)photoDictionary
         inManagedObjectContext:(NSManagedObjectContext *)context;

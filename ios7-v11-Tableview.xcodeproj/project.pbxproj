@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA00F4A61A6AB89100FA506C /* FlickrFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00F4A51A6AB89100FA506C /* FlickrFetcher.m */; };
 		EA00F4A91A6ACEA900FA506C /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA00F4A81A6ACEA900FA506C /* ImageViewController.m */; };
+		EA1238181A92756500B0C9A9 /* Photographer+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1238171A92756500B0C9A9 /* Photographer+Create.m */; };
 		EA2BBE3F1A72F3B800423A5F /* Flickr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EA2BBE3D1A72F3B800423A5F /* Flickr.xcdatamodeld */; };
 		EA3193441A6602870049DD11 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3193431A6602870049DD11 /* main.m */; };
 		EA3193471A6602870049DD11 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3193461A6602870049DD11 /* AppDelegate.m */; };
@@ -41,6 +42,8 @@
 		EA00F4A51A6AB89100FA506C /* FlickrFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrFetcher.m; sourceTree = "<group>"; };
 		EA00F4A71A6ACEA900FA506C /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
 		EA00F4A81A6ACEA900FA506C /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
+		EA1238161A92756500B0C9A9 /* Photographer+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Photographer+Create.h"; path = "model/Photographer+Create.h"; sourceTree = "<group>"; };
+		EA1238171A92756500B0C9A9 /* Photographer+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Photographer+Create.m"; path = "model/Photographer+Create.m"; sourceTree = "<group>"; };
 		EA2BBE3E1A72F3B800423A5F /* Flickr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Flickr.xcdatamodel; sourceTree = "<group>"; };
 		EA31933E1A6602870049DD11 /* ios7-v11-Tableview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios7-v11-Tableview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA3193421A6602870049DD11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				EA9661701A7D56B40015FB2E /* CDDocumentContainer.m */,
 				EACE7BD31A8273570010651E /* Photo+PhotoCategory.h */,
 				EACE7BD41A8273570010651E /* Photo+PhotoCategory.m */,
+				EA1238161A92756500B0C9A9 /* Photographer+Create.h */,
+				EA1238171A92756500B0C9A9 /* Photographer+Create.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -293,6 +298,7 @@
 				EA9B7DA61A84C02B00D91C04 /* Photographer.m in Sources */,
 				EACE7BD51A8273570010651E /* Photo+PhotoCategory.m in Sources */,
 				EA00F4A61A6AB89100FA506C /* FlickrFetcher.m in Sources */,
+				EA1238181A92756500B0C9A9 /* Photographer+Create.m in Sources */,
 				EA00F4A91A6ACEA900FA506C /* ImageViewController.m in Sources */,
 				EA2BBE3F1A72F3B800423A5F /* Flickr.xcdatamodeld in Sources */,
 				EA9B7DA31A84C02A00D91C04 /* Photo.m in Sources */,

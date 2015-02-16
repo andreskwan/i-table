@@ -38,15 +38,19 @@ typedef enum {
 
 + (NSURL *)URLforTopPlaces;
 
-+ (NSURL *)URLforPhotosInPlace:(id)flickrPlaceId maxResults:(int)maxResults;
++ (NSURL *)URLforPhotosInPlace:(id)flickrPlaceId
+                    maxResults:(int)maxResults;
 
-+ (NSURL *)URLforPhoto:(NSDictionary *)photo format:(FlickrPhotoFormat)format;
++ (NSURL *)URLforPhoto:(NSDictionary *)photo
+                format:(FlickrPhotoFormat)format;
 
 + (NSURL *)URLforRecentGeoreferencedPhotos;
 
 + (NSURL *)URLforInformationAboutPlace:(id)flickrPlaceId;
 
-+ (NSString *)extractNameOfPlace:(id)placeId fromPlaceInformation:(NSDictionary *)place;
++ (NSString *)extractNameOfPlace:(id)placeId
+            fromPlaceInformation:(NSDictionary *)place;
+
 + (NSString *)extractRegionNameFromPlaceInformation:(NSDictionary *)placeInformation;
 
 @end
